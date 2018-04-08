@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android ShowCase</string>
+    <string name="title_item_detail">Item Detail</string>
+
+    <string name="component_item_text">Text Elements</string>
+    <string name="component_item_text_description">A user interface element that displays text to the user. To provide user-editable text</string>
+    <string name="component_item_button">Buttons</string>
+    <string name="component_item_button_description">A user interface element the user can tap or click to perform an action.</string>
+    <string name="component_item_widget">Widgets</string>
+    <string name="component_item_widget_description">The widgets contains (mostly visual) UI elements to use on your Application screen.</string>
+</resources>
