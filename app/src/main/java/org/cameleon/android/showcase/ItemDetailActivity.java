@@ -3,14 +3,13 @@ package org.cameleon.android.showcase;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +65,19 @@ public class ItemDetailActivity extends AppCompatActivity {
                     .commit();
         }
     }
+
+//    @Override
+//    protected void onApplyThemeResource(Resources.Theme theme, int resid, boolean first) {
+//        try {
+//            String packageName = "org.cameleon.android.showcase";//"com.laposte.bscc.theme";
+//            Resources res = getPackageManager().getResourcesForApplication(packageName);
+//            int style = res.getIdentifier("BsccTheme.NoActionBar", "style", packageName);
+//            theme.applyStyle(style, true);
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        super.onApplyThemeResource(theme, resid, first);
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
