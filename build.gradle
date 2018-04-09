@@ -5,6 +5,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "http://nexus2.net-courrier.extra.laposte.fr/repository/maven-public/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
@@ -19,9 +20,32 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "http://nexus2.net-courrier.extra.laposte.fr/repository/maven-public/" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task setHttpProxyFromEnv {
+    def map = ['HTTP_PROXY': 'http', 'HTTPS_PROXY': 'https']
+    for (e in System.getenv()) {
+        def key = e.key.toUpperCase()
+        if (key in map) {
+            def base = map[key]
+            //Get proxyHost,port, username, and password from http system properties
+            // in the format http://username:password@proxyhost:proxyport
+            def (val1,val2) = e.value.tokenize( '@' )
+            def (val3,val4) = val1.tokenize( '//' )
+            def(userName, password) = val4.tokenize(':')
+            def url = e.value.toURL()
+            //println " - systemProp.${base}.proxy=${url.host}:${url.port}"
+            System.setProperty("${base}.proxyHost", url.host.toString())
+            System.setProperty("${base}.proxyPort", url.port.toString())
+            System.setProperty("${base}.proxyUser", userName.toString())
+            System.setProperty("${base}.proxyPassword", password.toString())
+        }
+    }
+}
+//build.dependsOn setHttpProxyFromEnv
