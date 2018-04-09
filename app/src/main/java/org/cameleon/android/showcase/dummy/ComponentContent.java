@@ -13,7 +13,8 @@ public class ComponentContent {
     static {
         ITEMS.add(new ComponentItem(0, R.layout.item_detail_text, R.string.component_item_text, R.string.component_item_text_description));
         ITEMS.add(new ComponentItem(1, R.layout.item_detail_button, R.string.component_item_button, R.string.component_item_button_description));
-        ITEMS.add(new ComponentItem(1, R.layout.item_detail_widget, R.string.component_item_widget, R.string.component_item_widget_description));
+        ITEMS.add(new ComponentItem(2, R.layout.item_detail_widget, R.string.component_item_widget, R.string.component_item_widget_description));
+        ITEMS.add(new ComponentItem(3, R.layout.item_detail_dialog, R.string.component_item_dialog, R.string.component_item_dialog_description));
     }
 
     public static class ComponentItem implements Serializable {

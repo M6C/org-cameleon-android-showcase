@@ -8,4 +8,15 @@
     <string name="component_item_button_description">A user interface element the user can tap or click to perform an action.</string>
     <string name="component_item_widget">Widgets</string>
     <string name="component_item_widget_description">The widgets contains (mostly visual) UI elements to use on your Application screen.</string>
+    <string name="component_item_dialog">Dialog</string>
+    <string name="component_item_dialog_description">A dialog is a small window that prompts the user to make a decision or enter additional information.</string>
+    <string name="component_item_dialog_description_long">A dialog is a small window that prompts the user to make a decision or enter additional information. A dialog does not fill the screen and is normally used for modal events that require users to take an action before they can proceed.</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <array name="colors_array">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </array>
 </resources>
