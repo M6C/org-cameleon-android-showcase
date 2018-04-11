@@ -11,8 +11,15 @@
     <string name="component_item_dialog">Dialog</string>
     <string name="component_item_dialog_description">A dialog is a small window that prompts the user to make a decision or enter additional information.</string>
     <string name="component_item_dialog_description_long">A dialog is a small window that prompts the user to make a decision or enter additional information. A dialog does not fill the screen and is normally used for modal events that require users to take an action before they can proceed.</string>
+    <string name="component_item_menu">Menu</string>
+    <string name="component_item_menu_description">Menus display a list of choices on a transient sheet of material.</string>
+    <string name="component_item_menu_description_long">Menus appear upon interaction with a button, action, or other control. They display a list of choices, with one choice per line.</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_leave">Leave</string>
 
     <array name="colors_array">
         <item>Red</item>

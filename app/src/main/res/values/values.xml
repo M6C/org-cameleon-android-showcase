@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="word_list">
+        <item>Aissam</item>
+        <item>Abbaucas</item>
+        <item>Agrippa (fin du Ier siècle apr. J.-C.)</item>
+        <item>Anaxagore (v. -500 ~ v. -428)</item>
+        <item>Anaximandre (-610 ~ -546)</item>
+        <item>Anaximène de Milet (v. -586 ~ -526)</item>
+        <item>Andocide (v. -440 ~ v. -392)</item>
+        <item>Antiphon</item>
+        <item>Antisthène (-444 ~ -371)</item>
+        <item>Arcésilas de Pitane (début du IIIe siècle)</item>
+        <item>Archélaos de Milet (Ve siècle av. J.-C.)</item>
+        <item>Archytas de Tarente (v. -435 ~ -347)</item>
+        <item>Aristippe de Cyrène (-435 ~ -355)</item>
+        <item>Aristote (-384 ~ -322)</item>
+        <item>Augustin d'Hippone (Aurelius Augustinus) (354 ~ 430)</item>
+        <item>Bias de Priène</item>
+        <item>Bion</item>
+        <item>Boèce (480 - 524)</item>
+        <item>Caecilius</item>
+        <item>Caecilius Metellus Numidicus</item>
+        <item>Caecilius Statius</item>
+        <item>Caecina (aulus -)</item>
+        <item>Caelestius</item>
+        <item>Caerellia</item>
+        <item>Caerellius (quintus -)</item>
+        <item>Caesar (c. iulius -)</item>
+        <item>Cailianos (t. varius -)</item>
+        <item>Cainias de Tarente</item>
+        <item>Calaïs de Rhégium</item>
+        <item>Calcidius</item>
+        <item>Callaischros (t. flavius -)</item>
+        <item>Cal(l)anus</item>
+        <item>Callias d'Aixonè</item>
+        <item>Callias d'Alopékè</item>
+        <item>Calliclès</item>
+        <item>Calliclès de Larisse</item>
+        <item>Callicratidas de Sparte</item>
+        <item>Calliétès</item>
+        <item>Callimaque de Cyrène</item>
+        <item>Calligénès</item>
+        <item>Callimbrotos de Caulonie</item>
+        <item>Callinicus Suetorius</item>
+        <item>Callinicus (valerius)</item>
+        <item>Callinos</item>
+        <item>Callinos d'Hermione</item>
+        <item>Calliphon</item>
+        <item>Calliphon de Crotone</item>
+        <item>Callippe</item>
+        <item>Callippe d'Athènes</item>
+        <item>Callippe de Corinthe</item>
+        <item>Callippe de Cyzique</item>
+        <item>Callisthène</item>
+        <item>Callisthène d'Olbia</item>
+        <item>Callisthène d'Olynthe</item>
+        <item>Callistrate</item>
+        <item>Cantharos de Sinope</item>
+        <item>Canus (iulius -)</item>
+        <item>Capion ou Capionos</item>
+        <item>Capito (sextus iulius ? -)</item>
+        <item>Carnéade (v. -215 ~ v. -129)</item>
+        <item>Carnéade d'Athènes</item>
+        <item>Carnéade de Cyrène</item>
+        <item>Carnéade le Jeune</item>
+        <item>Carnéiscos</item>
+        <item>Carnéios de Mégare</item>
+        <item>Carophantidas de Tarente</item>
+        <item>Chilon le Lacédémonien</item>
+        <item>Chrysippe de Soles (-281 ~ v. -205)</item>
+        <item>Cicéron (-106 ~ -43)</item>
+        <item>Cléanthe (-331 ~ -232)</item>
+        <item>Cléobule de Lindos (v. -630 ~ v. -560)</item>
+        <item>Critolaos</item>
+        <item>Critias (v. -460 ~ -403)</item>
+        <item>Diogène Laërce (début du IIIe siècle apr. J.-C.)</item>
+        <item>Douris de Samos (v. -340 ~ v. -260)</item>
+        <item>Démocrite (v. -460 ~ v. -370)</item>
+        <item>Diogène de Sinope (v. -400 - v. -325)</item>
+        <item>Damascios 480–550?</item>
+        <item>Empédocle (-493 ~ -433)</item>
+        <item>Énésidème (v. -80 ~ 130)</item>
+        <item>Épictète (v. 50 - v. 130)</item>
+        <item>Épicure de Samos (-341 ~ -270)</item>
+        <item>Ératosthène (-284 ~ -192)</item>
+        <item>Euclide de Mégare (v.450 - 340)</item>
+        <item>Fatine</item>
+        <item>Favorinus d'Arles (vers 80 - 90 apr. J.-C. - vers 150)</item>
+        <item>Gorgias de Léontinum (-487 ~ -380)</item>
+        <item>Héraclite (v. -550 ~ v. -480)</item>
+        <item>Héraclide du Pont</item>
+        <item>Héraclite de Tyr</item>
+        <item>Hipparchia</item>
+        <item>Hypatie (v. 370 - 415)</item>
+        <item>Iccos de Tarente</item>
+        <item>Ichthyas</item>
+        <item>Idaeus Himareus</item>
+        <item>Idoménée de Lampsaque</item>
+        <item>Ion de Chios</item>
+        <item>Isocrate (-436 ~ -338)</item>
+        <item>Jamblique (283 - 333)</item>
+        <item>Karim</item>
+        <item>Louisa</item>
+        <item>Leucippe de Milet (v. -460 ~ -370)</item>
+        <item>Lucrèce (v. -98 - v. -54)</item>
+        <item>Marc Aurèle (121 - 180)</item>
+        <item>Mélissos</item>
+        <item>Ménodote de Nicomédie (fin Ier siècle apr. J.-C.)</item>
+        <item>Métrodore de Lampsaque (l'ancien)</item>
+        <item>Métrodore de Chio</item>
+        <item>nermine</item>
+        <item>Ockham</item>
+        <item>Othéga</item>
+        <item>Sommaire :	Haut - A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</item>
+        <item>Panétios de Rhodes (v. -180 ~ v. -110)</item>
+        <item>Parménide l'Eléen (v. -515 ~ v. -440 ou -450)</item>
+        <item>Périandre de Corinthe</item>
+        <item>Persée de Cition (307 av. J.-C. - 243 av. J.-C.)</item>
+        <item>Pittacos de Mytilène</item>
+        <item>Philodème de Gadara (v. 110 ~ v.40)</item>
+        <item>Philolaos de Crotone</item>
+        <item>Philon d'Alexandrie (v. -13 ~ v. 54)</item>
+        <item>Platon (-428 ~ -347)</item>
+        <item>Plotin (205 ~ 270)</item>
+        <item>Plutarque (50 ~ 125)</item>
+        <item>Polémon d'Athènes (mort v. -270)</item>
+        <item>Polémon de Laodicée (v. 90 - 144)</item>
+        <item>Porphyre de Tyr (233 ~ 304)</item>
+        <item>Posidonios d'Apamée ou de Rhodes (v. -135 ~ v. -50)</item>
+        <item>Proclos (412 ~ 485)</item>
+        <item>Protagoras d'Abdère (-490 ~ -408)</item>
+        <item>Pyrrhon d'Élis (-365 ~ -275)</item>
+        <item>Pythagore de Samos (v. -580 ~ -500)</item>
+        <item>Robespierre</item>
+        <item>rola</item>
+        <item>rizo 3</item>
+        <item>Sénèque (-4 ~ 65)</item>
+        <item>Sextus Empiricus (début du IIIe siècle apr. J.-C.)</item>
+        <item>Socrate (-470 ~ -399)</item>
+        <item>Solon l'Athénien (640 ~ 558)</item>
+        <item>Speusippe</item>
+        <item>Thalès (-625 ~ -547)</item>
+        <item>Théophraste (v. -372 ~ v. -287)</item>
+        <item>Timée de Locres (Ve siècle av. J.-C.)</item>
+        <item>Timon de Phlionte (vers 325 av. J.-C. - 235 av. J.-C.)</item>
+        <item>Xenarque de Séleucie (v. -110 ~ v. -30)</item>
+        <item>Xénophane (fin VIe ~ début Ve av. J.-C.)</item>
+        <item>Xénophon (v. -430 ~ v. -355)</item>
+        <item>Xénocrate le Chalcédonien (v. -400 ~ v. -314)</item>
+        <item>Zacharias de Gaza</item>
+        <item>Zaleucos de Locres</item>
+        <item>Zalmoxis (ou Zamolxis)</item>
+        <item>Zénobie de Palmyre</item>
+        <item>Zénobios</item>
+        <item>Zénocrate</item>
+        <item>Zénodore de Tyr</item>
+        <item>Zénodote d'Alexandrie</item>
+        <item>Zénodote de Chypre</item>
+        <item>Zénon :</item>
+        <item>Zénon d'Alexandrie</item>
+        <item>Zénon d'Élée (v. -490 ~ fin Ve siècle av. J.-C.)</item>
+        <item>Zénon de Cition (-335 ~ -264)</item>
+        <item>Zénon de Pergame</item>
+        <item>Zénon de Sidon (épicurien)</item>
+        <item>Zénon de Sidon (stoïcien)</item>
+        <item>Zénon de Tarse</item>
+        <item>Zénothémis</item>
+        <item>Zéthus l'Arabe</item>
+        <item>Zeuxippe de Sparte</item>
+        <item>Zeuxippe [de Cnossos]</item>
+        <item>Zeuxis Goniopous</item>
+        <item>Zoïlos d'Amphipolis</item>
+        <item>Zoïlos de Perga</item>
+        <item>Zopas</item>
+        <item>Zopyre</item>
+        <item>Zoroastre</item>
+        <item>Zosime ou Sotime</item>
+        <item>Zosimianus (iulius-)</item>
+        <item>Zoticus</item>
+    </string-array>
+</resources>

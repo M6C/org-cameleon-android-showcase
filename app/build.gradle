@@ -28,5 +28,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    implementation 'com.laposte.bscc:lib-bscc-theme:1.0-SNAPSHOT@aar'
+//    implementation 'com.laposte.bscc:lib-bscc-theme:1.0-SNAPSHOT@aar'
 }
