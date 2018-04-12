@@ -11,19 +11,4 @@
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_menu"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_behavior="@string/bottom_sheet_behavior">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="A bottom sheet is a sheet of material that slides up from the bottom edge of the screen."
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@android:color/black"/>
-    </LinearLayout>
-
 </LinearLayout>

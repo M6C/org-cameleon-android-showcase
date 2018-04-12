@@ -2,6 +2,7 @@ package org.cameleon.android.showcase;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -88,6 +89,10 @@ public class ItemDetailFragment extends Fragment {
                     initMultiAutoCompleteTextView(rootView, activity);
                     break;
                 }
+                case R.layout.item_detail_botton_sheet: {
+                    initBottmSheet(rootView, activity);
+                    break;
+                }
                 default:
             }
         }
@@ -113,5 +118,25 @@ public class ItemDetailFragment extends Fragment {
             ArrayAdapter<String> adapter = new ArrayAdapter<>(activity, layoutItemId, dogList);
             autocompleteView.setAdapter(adapter);
         }
+    }
+
+    private void initBottmSheet(View rootView, Activity activity) {
+/*
+        View bottomSheet = rootView.findViewById(R.id.bottom_sheet);
+        if (bottomSheet != null) {
+            final BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+            bottomSheetBehavior.setPeekHeight(30);
+            bottomSheet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                    } else {
+                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                    }
+                }
+            });
+        }
+*/
     }
 }

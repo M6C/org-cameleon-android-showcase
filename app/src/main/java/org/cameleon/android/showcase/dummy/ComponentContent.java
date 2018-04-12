@@ -16,6 +16,7 @@ public class ComponentContent {
         ITEMS.add(new ComponentItem(2, R.layout.item_detail_widget, R.string.component_item_widget, R.string.component_item_widget_description));
         ITEMS.add(new ComponentItem(3, R.layout.item_detail_dialog, R.string.component_item_dialog, R.string.component_item_dialog_description));
         ITEMS.add(new ComponentItem(4, R.layout.item_detail_menu, R.string.component_item_menu, R.string.component_item_menu_description));
+        ITEMS.add(new ComponentItem(5, R.layout.item_detail_botton_sheet, R.string.component_item_bottom_sheet, R.string.component_item_bottom_sheet_description));
     }
 
     public static class ComponentItem implements Serializable {
