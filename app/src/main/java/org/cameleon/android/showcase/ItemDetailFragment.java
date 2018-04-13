@@ -1,8 +1,9 @@
 package org.cameleon.android.showcase;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,11 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.TimePicker;
 
 import org.cameleon.android.showcase.dummy.ComponentContent;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -76,8 +83,7 @@ public class ItemDetailFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(mItem.idDetail, container, false);
 
@@ -87,6 +93,8 @@ public class ItemDetailFragment extends Fragment {
                 case R.layout.item_detail_text: {
                     initAutoCompleteTextView(rootView, activity);
                     initMultiAutoCompleteTextView(rootView, activity);
+                    initDatePickerTextView(rootView, activity);
+                    initTimePickerTextView(rootView, activity);
                     break;
                 }
                 case R.layout.item_detail_botton_sheet: {
@@ -118,6 +126,53 @@ public class ItemDetailFragment extends Fragment {
             ArrayAdapter<String> adapter = new ArrayAdapter<>(activity, layoutItemId, dogList);
             autocompleteView.setAdapter(adapter);
         }
+    }
+
+    private void initDatePickerTextView(View rootView, final Activity activity) {
+        final EditText date = (EditText)rootView.findViewById(R.id.editText9);
+        final DateFormat sdf = SimpleDateFormat.getDateInstance(DateFormat.MEDIUM);
+        final Calendar cal = Calendar.getInstance();
+        final int year = cal.get(Calendar.YEAR);
+        final int month = cal.get(Calendar.MONTH);
+        final int day = cal.get(Calendar.DAY_OF_MONTH);
+        final DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                cal.set(Calendar.YEAR, year);
+                cal.set(Calendar.MONTH, month);
+                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                date.setText(sdf.format(cal.getTime()));
+            }
+        };
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(activity, listener, year, month, day).show();
+            }
+        });
+    }
+
+    private void initTimePickerTextView(View rootView, final Activity activity) {
+        final EditText time = (EditText)rootView.findViewById(R.id.editText8);
+        final DateFormat sdf = SimpleDateFormat.getTimeInstance(DateFormat.SHORT);
+        final Calendar cal = Calendar.getInstance();
+        final int hour = cal.get(Calendar.HOUR);
+        final int minute = cal.get(Calendar.MINUTE);
+        final TimePickerDialog.OnTimeSetListener listener = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                cal.set(Calendar.HOUR, hourOfDay);
+                cal.set(Calendar.MINUTE, minute);
+                time.setText(sdf.format(cal.getTime()));
+            }
+        };
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimePickerDialog dialog = new TimePickerDialog(activity, listener, hour, minute, true);
+                dialog.show();
+            }
+        });
     }
 
     private void initBottmSheet(View rootView, Activity activity) {

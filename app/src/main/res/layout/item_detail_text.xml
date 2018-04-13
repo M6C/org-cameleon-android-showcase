@@ -84,6 +84,7 @@
             android:layout_margin="@dimen/text_margin"
             android:ems="10"
             android:inputType="time"
+            android:focusableInTouchMode="false"
             android:hint="EditText inputType=time"/>
 
         <EditText
@@ -93,6 +94,7 @@
             android:layout_margin="@dimen/text_margin"
             android:ems="10"
             android:inputType="date"
+            android:focusableInTouchMode="false"
             android:hint="EditText inputType=date"/>
 
         <EditText
