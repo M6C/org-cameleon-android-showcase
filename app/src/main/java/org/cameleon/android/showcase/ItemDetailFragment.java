@@ -97,6 +97,10 @@ public class ItemDetailFragment extends Fragment {
                     initTimePickerTextView(rootView, activity);
                     break;
                 }
+                case R.layout.item_detail_widget: {
+                    initWebView(rootView, activity);
+                    break;
+                }
                 case R.layout.item_detail_botton_sheet: {
                     initBottmSheet(rootView, activity);
                     break;
@@ -106,6 +110,11 @@ public class ItemDetailFragment extends Fragment {
         }
 
         return rootView;
+    }
+
+    private void initWebView(View rootView, Activity activity) {
+//        WebView webView = rootView.findViewById(R.id.webView);
+//        webView.loadUrl("https://www.google.com/maps");
     }
 
     private void initMultiAutoCompleteTextView(View rootView, Activity activity) {
