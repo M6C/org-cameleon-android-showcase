@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -17,6 +19,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import org.cameleon.android.showcase.dummy.ComponentContent;
 
@@ -25,6 +28,11 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A fragment representing a single Item detail screen.
@@ -184,23 +192,108 @@ public class ItemDetailFragment extends Fragment {
         });
     }
 
-    private void initBottmSheet(View rootView, Activity activity) {
-/*
+    private void initBottmSheet(View rootView, final Activity activity) {
         View bottomSheet = rootView.findViewById(R.id.bottom_sheet);
         if (bottomSheet != null) {
             final BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
-            bottomSheetBehavior.setPeekHeight(30);
+            bottomSheetBehavior.setPeekHeight(300);
+            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            bottomSheet.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+                            //set a new Timer
+                            Timer timer = new Timer();
+                            TimerTask timerTask = new TimerTask() {
+                                public void run() {
+                                    activity.runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            // Do stuff to update UI here!
+                                            Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
+                                            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                                        }
+                                    });
+                                }
+                            };
+                            timer.schedule(timerTask, 5000);
+
+
+//                        ScheduledExecutorService scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
+//
+//                        //Schedule a task to run every 5 seconds (or however long you want)
+//                        scheduleTaskExecutor.schedule(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                activity.runOnUiThread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        // Do stuff to update UI here!
+//                                        Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
+//                                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+//                                    }
+//                                });
+//
+//                            }
+//                        }, 5, TimeUnit.SECONDS); // or .MINUTES, .HOURS etc.
+                        } else {
+                            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                        }
+                    }
+                    return false;
+                }
+            });
             bottomSheet.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+                        //set a new Timer
+                        Timer timer = new Timer();
+                        TimerTask timerTask = new TimerTask() {
+                            public void run() {
+                                activity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        // Do stuff to update UI here!
+                                        Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
+                                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                                    }
+                                });
+                            }
+                        };
+                        timer.schedule(timerTask, 5000);
+
+
+
+
+
+//                        ScheduledExecutorService scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
+//
+//                        //Schedule a task to run every 5 seconds (or however long you want)
+//                        scheduleTaskExecutor.schedule(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                activity.runOnUiThread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        // Do stuff to update UI here!
+//                                        Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
+//                                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+//                                    }
+//                                });
+//
+//                            }
+//                        }, 5, TimeUnit.SECONDS); // or .MINUTES, .HOURS etc.
                     } else {
                         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                     }
                 }
             });
         }
-*/
     }
 }
