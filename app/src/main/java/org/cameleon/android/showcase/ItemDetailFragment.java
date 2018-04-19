@@ -19,7 +19,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import org.cameleon.android.showcase.dummy.ComponentContent;
 
@@ -28,7 +27,6 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -109,8 +107,8 @@ public class ItemDetailFragment extends Fragment {
                     initWebView(rootView, activity);
                     break;
                 }
-                case R.layout.item_detail_botton_sheet: {
-                    initBottmSheet(rootView, activity);
+                case R.layout.item_detail_bottom_sheet: {
+                    initBottomSheet(rootView, activity);
                     break;
                 }
                 default:
@@ -192,7 +190,7 @@ public class ItemDetailFragment extends Fragment {
         });
     }
 
-    private void initBottmSheet(View rootView, final Activity activity) {
+    private void initBottomSheet(View rootView, final Activity activity) {
         View bottomSheet = rootView.findViewById(R.id.bottom_sheet);
         if (bottomSheet != null) {
             final BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
@@ -205,93 +203,31 @@ public class ItemDetailFragment extends Fragment {
                         if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
 
-                            //set a new Timer
-                            Timer timer = new Timer();
-                            TimerTask timerTask = new TimerTask() {
+                            TimerTask task = new TimerTask() {
                                 public void run() {
                                     activity.runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
                                             // Do stuff to update UI here!
-                                            Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
+//                                            Toast.makeText(activity, "Its been 2 seconds", Toast.LENGTH_SHORT).show();
                                             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                                         }
                                     });
                                 }
                             };
-                            timer.schedule(timerTask, 5000);
 
+//                            //set a new Timer
+//                            Timer timer = new Timer();
+//                            timer.schedule(task, 2000);
 
-//                        ScheduledExecutorService scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
-//
-//                        //Schedule a task to run every 5 seconds (or however long you want)
-//                        scheduleTaskExecutor.schedule(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                activity.runOnUiThread(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        // Do stuff to update UI here!
-//                                        Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
-//                                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-//                                    }
-//                                });
-//
-//                            }
-//                        }, 5, TimeUnit.SECONDS); // or .MINUTES, .HOURS etc.
+                            //Schedule a task to run every 2 seconds (or however long you want)
+                            ScheduledExecutorService scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
+                            scheduleTaskExecutor.schedule(task, 2, TimeUnit.SECONDS); // or .MINUTES, .HOURS etc.
                         } else {
                             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                         }
                     }
                     return false;
-                }
-            });
-            bottomSheet.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-
-                        //set a new Timer
-                        Timer timer = new Timer();
-                        TimerTask timerTask = new TimerTask() {
-                            public void run() {
-                                activity.runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        // Do stuff to update UI here!
-                                        Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
-                                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-                                    }
-                                });
-                            }
-                        };
-                        timer.schedule(timerTask, 5000);
-
-
-
-
-
-//                        ScheduledExecutorService scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
-//
-//                        //Schedule a task to run every 5 seconds (or however long you want)
-//                        scheduleTaskExecutor.schedule(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                activity.runOnUiThread(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        // Do stuff to update UI here!
-//                                        Toast.makeText(activity, "Its been 5 seconds", Toast.LENGTH_SHORT).show();
-//                                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-//                                    }
-//                                });
-//
-//                            }
-//                        }, 5, TimeUnit.SECONDS); // or .MINUTES, .HOURS etc.
-                    } else {
-                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-                    }
                 }
             });
         }
